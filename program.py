@@ -1,4 +1,4 @@
-import a2_a1
+import algebra2.a2_a1 as a2_a1
 
 def introduction():
     print("type an IXL name, and this program will solve it for you:")
