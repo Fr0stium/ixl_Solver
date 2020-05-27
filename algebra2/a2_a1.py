@@ -24,8 +24,8 @@ def solve():
             equivalences = [] # create a list of 2-tuples: item 1 is the variable, item 2 is its value
             for variable in variables:
                 print(str(variable) + " = ", end = "")
-                substitution = float(input())
+                substitution = int(input()) # we can cast to integer because this ixl exclusively deals with integers
                 equivalences.append((variable, substitution))
-            print(expression.subs(equivalences)) # evaulate the expression with all the variables substituted, and print the result
+            print("%d\n" % int(expression.subs(equivalences)))
         except Exception as e:
             print(str(e))
