@@ -1,12 +1,20 @@
+import readline
+import mpmath
 import sympy
+from sys import platform
+from subprocess import check_call
 from sympy.parsing.sympy_parser import parse_expr
 
 def introduction():
     print("\nA2.A1 - evaluate variable expressions involving integers\n")
     print("enter the expression. you will be asked what each variable's value is.")
     print("the program will return the solution.\n")
-    print("type 'e' to exit\n")
-        
+    print("type 'e' to exit.\n")
+
+def copy(answer): # copy to clipboard
+    cmd = ("echo " + answer.strip() + "|clip") if platform == "Windows" else ("echo " + answer.strip() + "|pbcopy")
+    return check_call(cmd, shell=True)
+
 def solve():
     while True:
         try:
@@ -21,6 +29,8 @@ def solve():
                 print(str(variable) + " = ", end = "") # ask the user what each variable's value is
                 substitution = int(input()) # cast to int since this ixl deals only with integers
                 variable_value_pairs.append((variable, substitution))
-            print("%d\n" % int(expression.subs(variable_value_pairs)))
+            answer = str(int(expression.subs(variable_value_pairs)))
+            print(answer + "\n")
+            copy(answer)
         except Exception as e:
             print(str(e) + "\n")
