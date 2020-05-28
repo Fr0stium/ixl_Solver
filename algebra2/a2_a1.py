@@ -2,12 +2,12 @@ import sympy
 from sympy.parsing.sympy_parser import parse_expr
 
 def introduction():
-    print("\nA2.A.1 - evaluate variable expressions involving integers\n")
+    print("\nA2.A1 - evaluate variable expressions involving integers\n")
     print("enter the expression. you will be asked what each variable's value is.")
     print("the program will return the solution.\n")
     print("type 'e' to exit\n")
         
-def solve(cast_to_int): # cast_to_int is a bool that casts numbers to ints or floats. this is so a2_a2.py can borrow this function
+def solve():
     while True:
         try:
             user_input = input()
@@ -16,11 +16,11 @@ def solve(cast_to_int): # cast_to_int is a bool that casts numbers to ints or fl
                 break
             expression = parse_expr(user_input) # transform the input into a mathematical expression
             variables = expression.free_symbols # get all the variables from the expression
-            equivalences = [] # create a list of 2-tuples: item 1 is the variable, item 2 is its value
+            variable_value_pairs = [] # create a list of 2-tuples: item 1 is the variable, item 2 is its value
             for variable in variables:
-                print(str(variable) + " = ", end = "")
-                substitution = int(input()) if cast_to_int else float(input()) # cast to int or float depending on cast_to_int
-                equivalences.append((variable, substitution))
-            print("%d\n" % int(expression.subs(equivalences)) if cast_to_int else "%f\n" % float(expression.subs(equivalences)))
+                print(str(variable) + " = ", end = "") # ask the user what each variable's value is
+                substitution = int(input()) # cast to int since this ixl deals only with integers
+                variable_value_pairs.append((variable, substitution))
+            print("%d\n" % int(expression.subs(variable_value_pairs)))
         except Exception as e:
             print(str(e) + "\n")
