@@ -1,8 +1,8 @@
 from algebra2 import a2_a1
 from algebra2 import a2_a2
+from algebra2 import a2_a3
 
 def introduction():
-    print("type 'e' to exit")
     print("type an IXL name, and this program will solve it for you:\n")
 
 def if_exit(user_input):
@@ -16,6 +16,7 @@ def do_ixl(user_input):
     eval("%s.solve()" % ixl)
 
 def main():
+    print("type 'e' to exit")
     while True:
         try:
             introduction()
@@ -23,7 +24,7 @@ def main():
             if_exit(user_input)
             do_ixl(user_input)
         except Exception as e:
-            print(e)
+            print(str(e) + "\n")
 
 # run main method
 main()
