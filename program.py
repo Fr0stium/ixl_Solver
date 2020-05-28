@@ -10,18 +10,18 @@ def if_exit(user_input):
         print("exiting...\n")
         exit()
 
+def do_ixl(user_input):
+    ixl = user_input.replace(".", "_")
+    eval("%s.introduction()" % ixl)
+    eval("%s.solve()" % ixl)
+
 def main():
     while True:
         try:
             introduction()
             user_input = input().lower()
             if_exit(user_input)
-            if "a2.a.1" in user_input:
-                a2_a1.introduction()
-                a2_a1.solve(True)
-            if "a2.a.2" in user_input:
-                a2_a2.introduction()
-                a2_a2.solve(False)
+            do_ixl(user_input)
         except Exception as e:
             print(e)
 
