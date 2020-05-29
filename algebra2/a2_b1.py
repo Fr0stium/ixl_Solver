@@ -5,9 +5,9 @@ from sympy import parse_expr, solve, Symbol
 from sys import platform
 
 def introduction():
-    print("\nA2.B1 - solve linear equations.\n")
-    print("enter the expression.")
-    print("the program will return the simplified version of the expression.")
+    print("\nA2.B1 - solve linear equations\n")
+    print("enter the equation.")
+    print("the program will return the solution of the equation.")
     print("type 'e' to exit.\n")
 
 def copy(answer): # copy to clipboard
