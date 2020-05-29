@@ -1,7 +1,7 @@
 import readline
 import mpmath
 from subprocess import check_call
-from sympy import parse_expr, symbols
+from sympy import parse_expr, Symbol
 from sys import platform
 
 def introduction():
