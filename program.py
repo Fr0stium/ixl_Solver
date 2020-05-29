@@ -13,7 +13,7 @@ def if_exit(user_input):
 def do_ixl(user_input):
     ixl = user_input.replace(".", "_")
     eval("%s.introduction()" % ixl)
-    eval("%s.solve()" % ixl)
+    eval("%s.solve_ixl()" % ixl)
 
 def main():
     print("type 'e' to exit")

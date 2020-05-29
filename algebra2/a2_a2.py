@@ -1,9 +1,8 @@
 import readline
 import mpmath
-import sympy
-from sys import platform
 from subprocess import check_call
-from sympy.parsing.sympy_parser import parse_expr
+from sympy import parse_expr, symbols
+from sys import platform
 
 def introduction():
     print("\nA2.A2 - evaluate variable expressions involving rational numbers\n")
@@ -15,7 +14,7 @@ def copy(answer): # copy to clipboard
     cmd = ("echo " + answer.strip() + "|clip") if platform == "Windows" else ("echo " + answer.strip() + "|pbcopy")
     return check_call(cmd, shell=True)
 
-def solve():
+def solve_ixl():
     while True:
         try:
             user_input = input()
