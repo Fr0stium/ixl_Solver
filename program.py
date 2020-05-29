@@ -1,6 +1,7 @@
 from algebra2 import a2_a1
 from algebra2 import a2_a2
 from algebra2 import a2_a3
+from algebra2 import a2_b1
 
 def introduction():
     print("type an IXL name, and this program will solve it for you:\n")
