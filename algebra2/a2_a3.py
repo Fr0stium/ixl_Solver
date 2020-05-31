@@ -21,9 +21,12 @@ def solve_ixl():
             if user_input == "e":
                 print("exiting a2.a3...\n")
                 break
+
             expression = parse_expr(user_input) # transform the input into a mathematical expression
-            answer = str(simplify(expression))
+            answer = str(simplify(expression)) # simplify expression
+
             print(answer + "\n")
             copy(answer)
+
         except Exception as e:
             print(str(e) + "\n")

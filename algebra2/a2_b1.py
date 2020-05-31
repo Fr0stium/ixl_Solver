@@ -19,16 +19,21 @@ def solve_ixl():
         try:
             user_input = input()
             if user_input == "e":
-                print("exiting a2.a1...\n")
+                print("exiting a2.b1...\n")
                 break
-            split_input = user_input.split("=")
+
+            split_input = user_input.split("=") # split input into two sides to generate a new equation that can be set to 0
             left_side = parse_expr(split_input[0])
             right_side = parse_expr(split_input[1])
-            if (len((left_side - right_side).free_symbols) > 1):
+
+            if (len((left_side - right_side).free_symbols) > 1): # check if there is more than one variable in the expression
                 raise Exception("too many variables")
-            expression = left_side - right_side
-            answer = str(solve(expression)[0])
+
+            new_equation = left_side - right_side
+            answer = str(solve(new_equation)[0])
+
             copy(answer)
             print(answer + "\n")
+
         except Exception as e:
             print(str(e) + "\n")
