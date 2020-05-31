@@ -1,18 +1,13 @@
 import readline
 import mpmath
-from subprocess import check_call
+from .global_functions import copy
 from sympy import parse_expr, Symbol
-from sys import platform
 
 def introduction():
     print("\nA2.A1 - evaluate variable expressions involving integers\n")
     print("enter the expression. you will be asked what each variable's value is.")
     print("the program will return the solution.\n")
     print("type 'e' to exit.\n")
-
-def copy(answer): # copy to clipboard
-    cmd = ("echo " + answer.strip() + "|clip") if platform == "Windows" else ("echo " + answer.strip() + "|pbcopy")
-    return check_call(cmd, shell=True)
 
 def solve_ixl():
     while True:

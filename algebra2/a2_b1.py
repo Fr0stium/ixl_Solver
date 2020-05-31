@@ -1,18 +1,13 @@
 import readline
 import mpmath
-from subprocess import check_call
+from .global_functions import copy
 from sympy import parse_expr, solve, Symbol
-from sys import platform
 
 def introduction():
     print("\nA2.B1 - solve linear equations\n")
     print("enter the equation.")
     print("the program will return the solution of the equation.")
     print("type 'e' to exit.\n")
-
-def copy(answer): # copy to clipboard
-    cmd = ("echo " + answer.strip() + "|clip") if platform == "Windows" else ("echo " + answer.strip() + "|pbcopy")
-    return check_call(cmd, shell=True)
 
 def solve_ixl():
     while True:
@@ -32,8 +27,8 @@ def solve_ixl():
             new_equation = left_side - right_side
             answer = str(solve(new_equation)[0])
 
-            copy(answer)
             print(answer + "\n")
+            copy(answer)
 
         except Exception as e:
             print(str(e) + "\n")
