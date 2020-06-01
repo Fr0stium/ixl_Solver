@@ -36,9 +36,9 @@ To exponentiate, only type in ```**``` Even though ```^``` is more commonly used
 
 There are other useful functions and operators that you should know. In the following list, x is the argument of each function. The functions are case-sensitive:
 
-- $|x|$ is ```Abs(x)```
-- $\sqrt{x}$ is ```sqrt(x)```.
-- $\sqrt[3]{x}$ is ```cbrt(x)```.
-- $\sqrt[n]{x}$ is ```root(x, n)```.
-- Trigonometric functions, like $\sin(x)$ and $\cos(x)$, are the same: ```sin(x)``` or ```cos(x)```.
-- Inverse trigonometric functions, like $\arcsin(x)$, are ```asin(x)```.
+- <img src="https://latex.codecogs.com/svg.latex?|x|" title="|x|" /> is ```Abs(x)```
+- <img src="https://latex.codecogs.com/svg.latex?\sqrt{x}" title="\sqrt{x}" /> is ```sqrt(x)```.
+- <img src="https://latex.codecogs.com/svg.latex?\sqrt[3]{x}" title="\sqrt[3]{x}" /> is ```cbrt(x)```.
+- <img src="https://latex.codecogs.com/svg.latex?\sqrt[n]{x}" title="\sqrt[n]{x}" /> is ```root(x, n)```.
+- Trigonometric functions, like <img src="https://latex.codecogs.com/svg.latex?\sin&space;(x)" title="\sin (x)" />, are the same: ```sin(x)```.
+- Inverse trigonometric functions, like <img src="https://latex.codecogs.com/svg.latex?\arcsin&space;(x)" title="\arcsin (x)" />, are ```asin(x)```.
