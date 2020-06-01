@@ -32,7 +32,9 @@ To multiply, only type in ```*```. Do not omit the multiplication operator, and 
 
 To divide, only type in ```/```. Do not type in ```÷```.
 
-To exponentiate, only type in ```**``` Even though ```^``` is more commonly used, you cannot type it in because Python's exponentiation operator is ```**```.
+To exponentiate, type in ```**```. Even though ```^``` is more commonly used, you cannot type it in because Python's exponentiation operator is ```**```. However, most answers the program returns will have ```^``` as the exponentiation operator.
+
+Alternatively, you could use ```Pow()``` (case-sensitive) to exponentiate. For example, to write <img src="https://latex.codecogs.com/svg.latex?x^{2}" title="x^{2}" />, you'd type ```Pow(x, 2)```.
 
 There are other useful functions and operators that you should know. In the following list, x is the argument of each function. The functions are case-sensitive:
 
